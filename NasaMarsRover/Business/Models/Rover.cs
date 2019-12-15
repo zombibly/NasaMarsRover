@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common.Models
+namespace Business.Models
 {
     public class Rover
     {

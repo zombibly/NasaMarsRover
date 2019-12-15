@@ -1,7 +1,6 @@
-﻿using Common.Models;
+﻿using Business.Apis.Models;
 using RestEase;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace NasaMarsRover.Apis
@@ -12,7 +11,7 @@ namespace NasaMarsRover.Apis
         [Query("api_key")]
         string ApiKey { get; set; }
 
-        [Get("{rover}/photos")]
-        Task<List<Photo>> GetPhotos([Path] string rover, [Query("earth_date", Format = "YYYY-MM-DD")] DateTime earthDate);
+        [Get("rovers/{rover}/photos")]
+        Task<PhotoResponse> GetPhotos([Path] string rover, [Query("earth_date", Format = "yyyy-MM-dd")] DateTime earthDate);
     }
 }

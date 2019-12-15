@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Rover.Queries;
+using Nasa.Rover.Queries;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,11 +17,28 @@ namespace NasaMarsRover.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("photos")]
-        public async Task<ActionResult<GetPhotos.Result>> GetPhotos([FromQuery] GetPhotos.Query query, CancellationToken cancellationToken)
+        [HttpGet]
+        public async Task<ActionResult<GetAllRovers.Result>> GetAllRovers(CancellationToken cancellationToken)
+        {
+            var query = new GetAllRovers.Query();
+            var result = await _mediator.Send(query, cancellationToken);
+
+            return Ok(result);
+        }
+
+        [HttpGet("{RoverId}/cameras")]
+        public async Task<ActionResult<GetRoverCameras.Result>> GetRoverCameras([FromRoute] GetRoverCameras.Query query, CancellationToken cancellationToken)
         {
             var result = await _mediator.Send(query, cancellationToken);
-            return result;
+            return Ok(result);
+        }
+
+        [HttpGet("{id}/photos")]
+        public async Task<ActionResult<GetPhotos.Result>> GetPhotos([FromRoute] int id, [FromQuery] GetPhotos.Query query, CancellationToken cancellationToken)
+        {
+            query.RoverId = id;
+            var result = await _mediator.Send(query, cancellationToken);
+            return Ok(result);
         }
     }
 }
