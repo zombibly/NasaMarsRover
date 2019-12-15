@@ -61,16 +61,8 @@ namespace Nasa.Rover.Queries
                     }
 
                     //Call Nasa Api to get photos
-                    List<Business.Models.Photo> gatheredPhotos;
-                    try
-                    {
-                        var result = await _api.GetPhotos(rover.Name, query.Date.Date);
-                        gatheredPhotos = result.Photos;
-                    }
-                    catch(Exception e)
-                    {
-                        throw e;
-                    }
+                    var result = await _api.GetPhotos(rover.Name, query.Date.Date);
+                    var gatheredPhotos = result.Photos;
 
                     foreach(var photo in gatheredPhotos)
                     {

@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NasaMarsRover", "NasaMarsRover\NasaMarsRover.csproj", "{6D898084-F40D-44C9-9DBE-37658EABF4F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{7046AFBA-A5BA-4D22-8C02-AB34004DF0AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{7046AFBA-A5BA-4D22-8C02-AB34004DF0AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rover", "Rover\Rover.csproj", "{84652C20-9D43-40FA-BFCA-E8A5D69331BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rover", "Rover\Rover.csproj", "{84652C20-9D43-40FA-BFCA-E8A5D69331BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{95E2C8FB-1C8F-4EEA-8B1E-4D3A9130E203}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{95E2C8FB-1C8F-4EEA-8B1E-4D3A9130E203}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rover.Tests", "Rover.Tests\Rover.Tests.csproj", "{CAE7E38C-721F-4DA8-9E62-32C435C1EC12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{95E2C8FB-1C8F-4EEA-8B1E-4D3A9130E203}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95E2C8FB-1C8F-4EEA-8B1E-4D3A9130E203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95E2C8FB-1C8F-4EEA-8B1E-4D3A9130E203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAE7E38C-721F-4DA8-9E62-32C435C1EC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE7E38C-721F-4DA8-9E62-32C435C1EC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE7E38C-721F-4DA8-9E62-32C435C1EC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE7E38C-721F-4DA8-9E62-32C435C1EC12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
