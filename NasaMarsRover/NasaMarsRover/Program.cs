@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Business.Models;
-using Data.Context;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace NasaMarsRover
 {
@@ -12,7 +7,10 @@ namespace NasaMarsRover
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args)
+            .UseUrls("http://localhost:44319/")
+            .Build()
+            .Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

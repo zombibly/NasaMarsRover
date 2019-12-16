@@ -37,6 +37,15 @@ namespace NasaMarsRover
             services.AddMediatR(typeof(GetPhotos).Assembly);
 
             services.AddDbContext<NasaContext>(options => options.UseInMemoryDatabase(databaseName: "Nasa"));
+
+            services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader()
+                       .AllowCredentials()
+                       .Build();
+            }));
         }
 
         public static void InitializeDb(NasaContext context)

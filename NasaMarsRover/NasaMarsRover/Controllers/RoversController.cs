@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Nasa.Rover.Queries;
 using System.Threading;
@@ -6,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace NasaMarsRover.Controllers
 {
+    [EnableCors("CorsPolicy")]
     [Route("api/v1/[controller]")]
     [ApiController]
-    public class RoverController : Controller
+    public class RoversController : Controller
     {
         private readonly IMediator _mediator;
 
-        public RoverController(IMediator mediator)
+        public RoversController(IMediator mediator)
         {
             _mediator = mediator;
         }
