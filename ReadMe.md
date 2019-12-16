@@ -21,3 +21,10 @@ Restful API that interacts with Nasa's public API.
 2. enter the nasa project /nasa-frontend/nasa
 3. run npm install
 4. run ng serve --open (this should open the application in your default browser)
+
+
+# Improvements
+1. Backend - Make the Camera model match Nasa's camera model better
+2. Frontend - Date Picker
+3. Frontend - Better use of the carousel (arrows on the side)
+4. Frontend - Make the index one based (better UX)
